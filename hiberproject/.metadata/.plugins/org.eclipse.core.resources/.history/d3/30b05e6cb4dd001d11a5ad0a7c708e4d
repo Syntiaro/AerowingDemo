@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    	h3{
+  		font-family:san-sarif; 
+  		font-size: 25pt;         
+  		font-style: normal; 
+  		font-weight: bold; 
+  		text-align: center; 
+  		text-decoration: underline
+		}
+		
+        .btn{
+           color: white;
+           background-color: green; 
+           font-weight: bolder;
+           height:40px;
+    	   width:200px;
+
+        }
+        
+
+    	table{
+    	font-family: san-sarif;  
+    	font-size: 22pt; 
+   		font-style: normal;
+    	
+        }
+        
+        table.inner{
+ 	 	border: 0px
+		}
+		.textfield{
+		 height: 30px;
+         width: 200px;
+         font-size: san-sarif;
+		
+		}
+		.text-danger{
+		color:red;
+		}
+    </style>
+</head>
+<body>
+
+
+    <h3 align="center" style="font-weight: bolder;">INTERNSHIP APPLICATION FORM</h3>
+    
+	<form action="internshipServlet" method="post">
+ 
+	<table align="center" cellpadding = "10">
+ 
+<tr>
+<td>FIRST NAME <span class="text-danger">*</span></td>
+<td><input type="text" name="first_name" maxlength="50" placeholder="First Name" required/></td>
+
+<td>LAST NAME <span class="text-danger">*</td>
+<td><input type="text" name="last_name" maxlength="50" placeholder="Last Name" required/></td>
+</tr>
+
+
+<tr>
+<td>EMAIL ID <span class="text-danger">*</td>
+<td><input type="text" name="email" maxlength="100" placeholder="Your Email" required/></td>
+
+<td>MOBILE NUMBER <span class="text-danger">*</td>
+
+<td>
+<input type="text" name="mobile" maxlength="10"placeholder="Phone Number"  required/>
+
+</td>
+</tr>
+
+<tr>
+    <td>Qualification <span class="text-danger">*</td>
+    <td><input type="text" name="quali" maxlength="100" placeholder="Higher Qualifictaion" required/></td>
+    
+    <td>Upload Resume <span class="text-danger">*</td>
+    
+    <td>
+    <input type="file" name="file" maxlength="10"placeholder="No file Chosen"  required/>
+    
+    </td>
+    </tr>
+ 
+<tr>
+<td>GENDER <span class="text-danger">*</td>
+<td>Male <input type="radio" name="gender" value="Male" />
+Female <input type="radio" name="gender" value="Female" />
+</td>
+
+<td>ADDRESS <span class="text-danger">* <br /><br /><br /></td>
+<td><textarea name="address" rows="4" cols="30" placeholder="write here Your Address" required></textarea></td>
+</tr>
+
+<tr>
+    <td>Courses <span class="text-danger">*</td>
+    <td>
+        <select name="course" class="textfield" required>
+            <option value="Select Course">Select course</option>
+            <option value="autocad">AutoCad</option>
+            <option value="Catia">Catia</option>
+            <option value="Solid">Solid Works</option>
+            <option value="Cre">Cre-io</option>
+            <option value="UG">UG</option>
+        </select>
+
+    </td>
+
+    <td>LinkedIn</td>
+    <td><input type="text" name="url" maxlength="100" placeholder="Profile Url" class="textfield"></td>
+</tr>
+
+<tr>
+	<td colspan="2" align="center" >
+    <input type="submit" value="Submit" class="btn">
+   
+    </td>
+   
+</tr>
+
+</table>
+</form>
+
+ 
+</body>
+</html>

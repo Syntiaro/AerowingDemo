@@ -1,0 +1,77 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.entities.job_form;
+import com.helper.FactoryProvider;
+
+
+public class internahipservlets extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+   
+    public internahipservlets() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+		
+		try {
+			String fname = request.getParameter("first_name");
+			String lname = request.getParameter("last_name");
+			String email = request.getParameter("email");
+			String mobile = request.getParameter("mobile");
+			String quali = request.getParameter("quali");
+			String gender = request.getParameter("gender");
+			String address = request.getParameter("address");
+			String post = request.getParameter("post");
+			String linkurl = request.getParameter("lurl");
+			
+			internship_form job = new internship_form(fname, lname, email, mobile, quali, gender, address, post, linkurl);
+			
+			System.out.println(job.getFirst()+";"+job.getLast());
+			
+			
+			
+			Session session = FactoryProvider.getFactory().openSession();
+
+			Transaction tx = session.beginTransaction();
+
+			session.save(job);
+			
+			tx.commit();
+
+			session.close();
+			
+			response.setContentType("text/html");
+			PrintWriter out = response.getWriter();
+			out.println("<h1>Form is Submitted...</h1>");
+			System.out.println("Done....");
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

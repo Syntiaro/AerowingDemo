@@ -1,0 +1,10 @@
+127.0.0.1 - - [18/Apr/2023:12:00:49 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:12:00:51 +0530] "GET /mavenWeb/internship_form.jsp HTTP/1.1" 200 3302
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:12:00:51 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [18/Apr/2023:12:14:24 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:12:14:26 +0530] "GET /mavenWeb/internship_form.jsp HTTP/1.1" 200 3303
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:12:14:26 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:12:14:39 +0530] "POST /mavenWeb/internshipservlets HTTP/1.1" 404 782
+127.0.0.1 - - [18/Apr/2023:12:36:59 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:12:37:00 +0530] "GET /mavenWeb/internship_form.jsp HTTP/1.1" 200 3303
+0:0:0:0:0:0:0:1 - - [18/Apr/2023:12:37:14 +0530] "POST /mavenWeb/internshipservlets HTTP/1.1" 404 782
