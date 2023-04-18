@@ -1,0 +1,27 @@
+.bg-custom{
+	
+	background: #283593  !important;
+}
+
+.navbar .nav-item .nav-link{
+	
+	font-size: 15px;
+	color: white;
+}
+.navbar-brand{
+    font-size: 30px;
+}
+.navbar .nav-item:hover .nav-link{
+	
+	background: white;
+	color: black;
+	border-radius: 10px;
+} 
+
+.footer{
+	background: #0d0d0d;
+} 
+.hr.new1{
+	border-top: 1px dashed #283593;
+
+}
